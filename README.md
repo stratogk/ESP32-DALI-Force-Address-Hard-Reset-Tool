@@ -36,15 +36,42 @@ The code implements a raw bit-banging protocol to execute the following sequence
 ### Signal Logic
 The project uses Manchester Encoding (Bit-Banging) to communicate with the DALI bus without specialized hardware drivers (other than the level shifter).
 
-
-
 ## 💻 Configuration
 
 Open `src/main.cpp` to change the target address:
 
-```cpp
+
 // --- SETTINGS ---
+
 const int DALI_TX_PIN = 21; 
 
 // WHICH ADDRESS TO ASSIGN?
+
 const byte TARGET_ADDRESS = 2; // Change this to 1, 5, etc.
+
+## 📸 Verification
+
+Check your Serial Monitor (115200 baud) for the success log:
+
+
+
+--- DALI FORCE PROGRAMMER ---
+
+Trying to FORCE address: 2
+
+> Sending RESET (Unlock)...
+> 
+> Sending INITIALISE...
+> 
+> Setting DTR...
+> 
+> Saving Address...
+> 
+> Sending TERMINATE...
+> 
+Programming Sequence Finished.
+
+Testing Address 2: ON...
+
+
+
