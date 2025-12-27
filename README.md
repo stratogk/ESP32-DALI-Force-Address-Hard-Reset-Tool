@@ -74,4 +74,57 @@ Programming Sequence Finished.
 Testing Address 2: ON...
 
 
+## 🛒 Hardware Bill of Materials (BOM)
+
+This project has been tested and verified with the following specific hardware components.
+
+### 1. Microcontroller
+* **Model:** ESP32-S3 (N16R8 Variant)
+* **Specs:** Dual-core 240MHz, 16MB Flash, 8MB PSRAM.
+* **Note:** The N16R8 version is recommended for stability, though standard ESP32 boards work.
+
+### 2. DALI Interface Module
+* **Model:** **Waveshare Pico-DALI2** (Adapted for ESP32 Pico)
+* **Function:** Handles TTL (3.3V) to DALI (16V) logic conversion.
+* **Connection:** Wired via jumper cables from the Pico header to the ESP32.
+
+| Waveshare Pin | ESP32-S3 Pin | Description |
+| :--- | :--- | :--- |
+| **GPIO6 (Pin 9)** | **GPIO 21** | **TX** (Transmit DALI) |
+| **VSYS (Pin 39)** | **5V** | Power Input |
+| **GND (Pin 38)** | **GND** | Ground |
+| **DALI Bus** | **DALI +/-** | To LED Drivers |
+
+![Pico-DALI2-details-inter](https://github.com/user-attachments/assets/e71efed2-2cba-43d2-8d57-1e034cbc3b97)
+
+### 3. DALI Bus Power Supply
+* **Brand:** **Mean Well**
+* **Model:** **DLP-04R**
+* **Type:** DIN Rail Mount DALI Power Supply
+* **Specs:** Output 16V DC / 240mA
+* **Note:** Essential for powering the DALI bus communication line.
+
+![S20dfc8ec6d304815b8aef36b51e602c3S](https://github.com/user-attachments/assets/11147d48-c4a1-4275-a6de-34e429af9bc8)
+
+
+
+### 4. ✅ Verified LED Drivers
+The code has been field-tested with the following drivers:
+
+| Brand | Model | Type | Status |
+| :--- | :--- | :--- | :--- |
+| **QLT** | **PBX 150D** | Dimmable LED Driver | **VERIFIED** |
+| **QLT** | **PBX 200D** | Dimmable LED Driver | **VERIFIED** |
+
+> **Verification:** Drivers confirmed to accept Hard Reset (`0x20`) and Force Address commands correctly.
+
+![PBOX200D2B-1024x736](https://github.com/user-attachments/assets/2de5d523-89f2-40d6-bc22-a11eec26e606)
+
+
+
+
+
+
+
+
 
