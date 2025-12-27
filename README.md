@@ -27,7 +27,7 @@ The code implements a raw bit-banging protocol to execute the following sequence
 | :--- | :--- | :--- |
 | **GPIO 21** | **TX** | DALI Transmit Line |
 | **GND** | **GND** | Common Ground |
-| **3.3V** | **VCC** | Logic Power |
+| **5V** | **VCC** | Logic Power |
 
 **Note:** You also need a 16V DALI Bus Power Supply connected to the DALI bus wires.
 
